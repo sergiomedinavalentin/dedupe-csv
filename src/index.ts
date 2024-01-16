@@ -9,7 +9,7 @@ import validation from './validations'
 
 export const Deduper = async () => {
   console.log(cyan('Working...'))
-  const { file, column, keep } = Options()
+  const { file, column, keep, delimiter } = Options()
   let total: number
 
   // Count number of lines if file accessible
@@ -23,7 +23,7 @@ export const Deduper = async () => {
   // Resolve the absolute file path
   const filePath = resolve(process.cwd(), file)
 
-  await ProcessFile(total, filePath, file, column, keep)
+  await ProcessFile(total, filePath, file, column, keep, delimiter)
 }
 
 Deduper()

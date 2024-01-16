@@ -5,7 +5,8 @@ export default () => {
   const options = {
     file: '',
     column: '',
-    keep: 'first'
+    keep: 'first',
+    delimiter: ';',
   }
 
   for (const [index, argv] of process.argv.entries()) {

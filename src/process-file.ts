@@ -12,7 +12,8 @@ export default async (
   filePath: string,
   file: string,
   column: string,
-  keep: string
+  keep: string,
+  delimiter: string,
 ) => {
   let json: string[] = []
   let counter: number = 0
@@ -29,7 +30,7 @@ export default async (
   }
 
   createReadStream(filePath)
-    .pipe(csv())
+    .pipe(csv({ separator: delimiter }))
     .on('data', (obj) => {
       // Check the columns do exists
       if (firstRound) {
