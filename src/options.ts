@@ -1,5 +1,4 @@
-import chalk from 'chalk'
-import validations from './validations'
+import validations from './validations';
 
 export default () => {
   const options = {
@@ -7,18 +6,18 @@ export default () => {
     column: '',
     keep: 'first',
     delimiter: ';',
-  }
+  };
 
   for (const [index, argv] of process.argv.entries()) {
     if (index > 1) {
-      const [label, value] = argv.split('=')
+      const [label, value] = argv.split('=');
       if (Object.keys(options).includes(label)) {
-        options[label] = value
+        options[label] = value;
       } else {
-        validations('label', label)
+        validations('label', label);
       }
     }
   }
 
-  return options
-}
+  return options;
+};

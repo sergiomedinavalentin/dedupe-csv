@@ -1,21 +1,30 @@
 {
-  "ts-node": { "files": true },
   "compilerOptions": {
-    "outDir": "./lib",
+    "alwaysStrict": true,
+    "target": "es2016",
     "module": "commonjs",
-    "target": "es6",
-    "lib": ["es2017", "dom"],
-    "moduleResolution": "node",
-    "sourceMap": false,
-    "allowJs": true,
-    "declaration": true,
-    "resolveJsonModule": true,
-    "esModuleInterop": true,
-    "allowSyntheticDefaultImports": true,
-    "baseUrl": "./",
-    "rootDir": "./src",
-    "typeRoots": ["./node_modules/@types", ".src/@types"]
+    "removeComments": false,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "sourceMap": true,
+    "noImplicitAny": false,
+    "outDir": "./lib",
+    "skipLibCheck": true,
+    "strictPropertyInitialization": false,
+    "lib": [
+      "es6",
+      "dom",
+    ],
   },
-  "include": ["src"],
-  "exclude": ["node_modules", "**/__tests__/*"]
+  "include": [
+    "./src/**/*.ts",
+    "./lib/*.ts",
+    "./bin/*.ts",
+    ".eslintrc.js",
+  ],
+  "exclude": [
+    "node_modules",
+    "lib",
+    "**/__tests__/*"
+  ],
 }
