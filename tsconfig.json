@@ -17,9 +17,8 @@
     ],
   },
   "include": [
-    "./src/**/*.ts",
+    "./src/*.ts",
     "./lib/*.ts",
-    "./bin/*.ts",
     ".eslintrc.js",
   ],
   "exclude": [

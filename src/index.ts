@@ -22,8 +22,6 @@ export const deduper = async () => {
   // Resolve the absolute file path
   const filePath = resolve(process.cwd(), file);
 
-  console.log('filepath', filePath);
-
   await ProcessFile(total, filePath, file, column, keep, delimiter);
 };
 
