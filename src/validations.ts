@@ -1,4 +1,4 @@
-import chalk from 'chalk';
+const chalk = require('chalk');
 const { red, yellow, green } = chalk;
 
 export default async (error: string, item?: string, file?: string) => {

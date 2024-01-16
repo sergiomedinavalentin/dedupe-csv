@@ -1,5 +1,5 @@
-import chalk from 'chalk';
 import { SingleBar, Presets } from 'cli-progress';
+const chalk = require('chalk');
 const { cyan } = chalk;
 
 export default (total: number) => {

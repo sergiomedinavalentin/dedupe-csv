@@ -1,5 +1,5 @@
 import { createReadStream } from 'fs';
-import readline from 'readline';
+const readline = require('readline');
 
 export default async (file: string) => {
   let lineCount: number = 0;
